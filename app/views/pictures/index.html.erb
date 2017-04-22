@@ -1,0 +1,11 @@
+instagram
+
+<p><%= link_to "写真を投稿する", new_picture_path %></p>
+
+<% @pictures.each do |picture| %>
+  <h4><%= picture.title %></h4>
+  <%= picture_img(picture) %>
+
+  <p><%= link_to "詳細画面", picture_path(picture.id) %></p>
+  <p><%= link_to "編集画面", edit_picture_path(picture.id) %></p>
+<% end %>
