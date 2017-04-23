@@ -1,5 +1,5 @@
 class PicturesController < ApplicationController
- before_action :set_picture, only:[:edit,:update,:destroy]
+ before_action :set_picture, only:[:edit,:update,:destroy, :show]
   def index
     @pictures = Picture.all
   end
@@ -18,7 +18,6 @@ class PicturesController < ApplicationController
   end
 
   def show
-
   end
 
   def edit

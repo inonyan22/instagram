@@ -19,6 +19,7 @@
   <%= f.label :写真 %>
   <%= f.file_field :image_url %>
   <%= f.hidden_field :image_url_cache %>
+  <%= picture_img(@picture) %>
   <br>
   <%= f.submit'編集' %>
 <% end %>
