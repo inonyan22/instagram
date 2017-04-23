@@ -5,7 +5,11 @@ class PicturesController < ApplicationController
   end
 
   def new
-    @picture = Picture.new
+    if params[:back]
+      @picture = Picture.new(picture_params)
+    else
+      @picture = Picture.new
+    end
   end
 
   def create
@@ -34,6 +38,11 @@ class PicturesController < ApplicationController
   def destroy
     @picture.destroy
     redirect_to pictures_path, notice: "削除しました！"
+  end
+
+  def confirm
+    @picture = Picture.new(picture_params)
+    render :new if @picture.invalid?
   end
 
 

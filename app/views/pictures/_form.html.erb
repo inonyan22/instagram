@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<%= form_for(@picture) do |f| %>
+<%= form_for(@picture, url: choose_new_or_edit) do |f| %>
 <% if @picture.errors.any? %>
   <div id="error_explanation">
     <h2><%= @picture.errors.count %>件のエラーがあります。</h2>
@@ -20,7 +20,7 @@
   <%= f.file_field :image_url %>
   <%= f.hidden_field :image_url_cache %>
   <br>
-  <%= f.submit'編集' %>
+  <%= f.submit'投稿' %>
 <% end %>
 
 <%= link_to "一覧画面にもどる", pictures_path %>
