@@ -52,3 +52,5 @@ gem 'carrierwave'
 gem 'rmagick'
 
 gem 'rails_admin'
+
+gem 'devise'
