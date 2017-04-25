@@ -1,14 +1,28 @@
-<p><%= notice %></p>
+<div class="container">
+  <div class="wrapper col-md-3 col-ex-10">
+    <br>
+    <h3 class="title">EXAM1 課題</h3>
+    <br>
+    <%= link_to "写真を投稿する", new_picture_path, class: 'btn btn-default' %>
+    <br>
+    <p>作成者　井上陽介</p>
+    <p>プログラミング4か月目です。</p>
+  </div>
+  <div class="wrapper col-md-8  col-ex-10">
 
-instagram
+    <p><%= notice %></p>
 
-<p><%= link_to "写真を投稿する", new_picture_path %></p>
+    <h3>instagram</h3>
 
-<% @pictures.each do |picture| %>
-  <h4><%= picture.title %></h4>
-  <%= picture_img(picture) %>
+    <% @pictures.each do |picture| %>
+      <div class="row">
+        <p><%= picture.title %></p>
 
-  <p><%= link_to "詳細画面", picture_path(picture.id) %></p>
-  <p><%= link_to "編集画面", edit_picture_path(picture.id) %></p>
-  <p><%= link_to "削除する", picture_path(picture.id), data: {confirm: '本当に削除してよろしいですか？'}, method: :delete %></p>
-<% end %>
+        <p><%= picture_img(picture) %></p>
+        <p><%= link_to "詳細画面", picture_path(picture.id), class: 'btn btn-default'  %></p>
+        <p><%= link_to "編集画面", edit_picture_path(picture.id), class: 'btn btn-default' %></p>
+        <p><%= link_to "削除する", picture_path(picture.id), data: {confirm: '本当に削除してよろしいですか？'}, method: :delete, class: 'btn btn-default' %></p>
+      </div>
+    <% end %>
+  </div>
+</div>

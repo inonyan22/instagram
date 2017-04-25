@@ -14,13 +14,13 @@
 <% end %>
 
   <%= f.label :タイトル %>
-  <%= f.text_field :title %>
+  <%= f.text_field :title, class: 'form-control' %>
   <br>
   <%= f.label :写真 %>
   <%= f.file_field :image_url %>
   <%= f.hidden_field :image_url_cache %>
   <br>
-  <%= f.submit'投稿' %>
+  <%= f.submit'投稿', class: 'btn btn-primary btn-block'  %>
 <% end %>
 
 <%= link_to "一覧画面にもどる", pictures_path %>

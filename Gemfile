@@ -54,3 +54,5 @@ gem 'rmagick'
 gem 'rails_admin'
 
 gem 'devise'
+
+gem 'twitter-bootstrap-rails'
