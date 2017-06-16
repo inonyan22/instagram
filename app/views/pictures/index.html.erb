@@ -22,6 +22,7 @@
         <p><%= link_to "詳細画面", picture_path(picture.id), class: 'btn btn-default'  %></p>
         <p><%= link_to "編集画面", edit_picture_path(picture.id), class: 'btn btn-default' %></p>
         <p><%= link_to "削除する", picture_path(picture.id), data: {confirm: '本当に削除してよろしいですか？'}, method: :delete, class: 'btn btn-default' %></p>
+        <p>作成者名 <%= picture.user.name %></p>
       </div>
     <% end %>
   </div>

@@ -2,8 +2,23 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .flash {
-  color: white;
+  color: black;
   padding-top: 10px;
+}
+
+.main-header{
+  padding-bottom: 15%;
+  width: 100%;
+  background-size: cover;
+
+  background-attachment: fixed;
+}
+
+.main-header img{
+    display: block;
+    margin:  auto;
+    width: 100%;
+    padding-top: 0%;
 }
 
 header {
@@ -18,7 +33,7 @@ footer{
     background-color: purple;
     color:white;
     padding-bottom: 10px;
-    padding: 20px 0 10px 0;
+    padding: 0 0 10px 0;
     margin: auto;
     bottom: 0;
     position: absolute;
@@ -42,13 +57,13 @@ body {
 }
 .navbar-default {
   .navbar-brand {
-    color: #ccc;
+    color: black;
     &:hover {
       color: white;
     }
   }
   .navbar-nav > li > a {
-    color: #ccc;
+    color: black;
     &:hover, &:focus {
       color: white;
     }

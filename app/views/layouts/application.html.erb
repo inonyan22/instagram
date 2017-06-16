@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Instagram</title>
+  <title>Inostagram</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -28,7 +28,7 @@
                   <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
                 <% else %>
                   <li><%= link_to 'ログイン', new_user_session_path %></li>
-                  <li><%= link_to 'サインアップ', new_user_registration_path %></li>
+                  <li><%= link_to 'アカウント作成', new_user_registration_path %></li>
                 <% end %>
               </ul>
             </li>
@@ -42,5 +42,5 @@
   <%= yield %>
 
   <footer>
-    <p>EXAM1</p>
+    <p>EXAM2</p>
   </footer>
